@@ -3,7 +3,7 @@ name: Trabajos Dependientes
 on: 
   push: 
     branches:
-      - main
+      - main10
  
 jobs:
   setup:
