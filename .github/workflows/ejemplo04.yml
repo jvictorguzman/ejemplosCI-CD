@@ -3,7 +3,7 @@ name: Creacion de varios artefactos ZIP
 on: 
   push: 
     branches:
-      - main 
+      - main2
 jobs:
   crear-artefactos-alfa:
     runs-on: ubuntu-latest
