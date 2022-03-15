@@ -3,7 +3,7 @@ name: Trabajos independientes
 on: 
   push: 
     branches:
-      - main9
+      - main
  
 jobs:
   setup:
