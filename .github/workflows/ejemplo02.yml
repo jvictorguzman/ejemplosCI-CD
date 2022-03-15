@@ -24,7 +24,7 @@ jobs:
         echo 'Tercer mensaje'     > archivo03.txt
         cd ..
         
-     - name: Step 4 - Creacion de archivos en directorio
+     - name: Step 4 - Listado de directorios y archivos
        run: ls -la documentos
        
      - name: Step 5 - Visualizacion de contenidos
