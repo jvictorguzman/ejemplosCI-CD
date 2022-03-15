@@ -1,4 +1,4 @@
-name: Crear un ZIP del directorio f
+name: Crear un ZIP del directorio 
 
 on: 
   push: 
@@ -23,4 +23,4 @@ jobs:
         run: zip -r alfa.zip alfa
                            
       - name: Step 4 - Verificacion de la creacion del archivo ZIP
-        run: la -la
+        run: ls -la
