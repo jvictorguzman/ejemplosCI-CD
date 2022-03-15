@@ -1,0 +1,52 @@
+name: Creacion de varios artefactos ZIP
+
+on: 
+  push: 
+    branches:
+      - main
+ 
+jobs:
+  comandos-basicos:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Step 1 - Crear directorios alfa
+      run: mkdir alfa
+      
+    - name: Step 2 - Adicionar archivos al directorio alfa
+      run: |
+        cd alfa
+        echo 'Mensaje alfa 1'   > alpha01.html
+        echo 'Mensaje alfa 2'   > alpha02.html
+        cd ..
+      
+    - name: Step 3 - Zip directorio alfa
+      run: zip -r alfa.zip alfa
+     
+    - name: Step 4 - Verificacion de la creacion de artefactos ZIP
+      run: ls -la
+      
+      
+crear-artefacto-beta:
+  runs-on: ubuntu-latest
+  steps:
+  
+    - name: Step 1 - Crear directorio beta
+      run: mkdir beta
+      
+    - name: Step 2 - Adicionar archivos al directorio beta
+      run: |
+        cd beta
+        echo 'Mensaje beta 1'  > beta01.html
+        echo 'Mensaje beta 2'  > beta02.html
+        cd ..
+    
+    - name: Step 3 - Zip directorio beta
+      run: zip -r beta.zip beta
+      
+    - name: Step 4 - Verificacion de la creacion de artefactos ZIP
+      run: ls -la
+        
+        
+        
+  
