@@ -1,0 +1,22 @@
+name: Matrices de opciones
+
+on: 
+  push: 
+    branches:
+      - main
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        cc: [gcc, clang]
+        
+    steps:    
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ${{ matrix.cc }} |
+        
+        
+    
