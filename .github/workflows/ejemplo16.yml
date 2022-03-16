@@ -1,0 +1,29 @@
+name: Ejecucion en un contenedor
+
+on: 
+  push: 
+    branches:
+      - main
+jobs:
+
+  crear-acceder-multicontenedor:
+  
+    runs-on: ubuntu-latest
+    
+    services:
+      portal-oficina01:
+        image: httpd:latest
+        ports:
+          - 8080:80 
+          
+      portal-oficina02:
+        image: httpd:latest
+        ports:
+          - 8081:80    
+          
+    steps:    
+      - name: Acceder al portal oficina 1
+        run: curl http://localhost:8080
+
+      - name: Acceder al portal oficina 2
+        run: curl http://localhost:8081
